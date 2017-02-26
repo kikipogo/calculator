@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <script src="../vendors/jquery.js" charset="utf-8"></script>
-    <script src="../scripts/client.js" charset="utf-8"></script>
-    <title>calculator!</title>
-  </head>
-  <body>
-<input id="number1">
-<input id="number2">
-<button id="addNumbers">+</button>
-<button id="subtractNumbers">-</button>
-<button id="multiplyNumbers">*</button>
-<button id="divideNumbers">/</button>
-<p>Total:<span>0</span></p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles/styles.css"/>
+  <script src="../vendors/jquery.js" charset="utf-8"></script>
+  <script src="../scripts/client.js" charset="utf-8"></script>
+  <title>calculator!</title>
+</head>
+<body>
+  <input id="number1" type='number'/>
+  <input id="number2" type='number'/>
+  <div class='mathOperators'>
+    <button id="add">+</button>
+    <button id="subtract">-</button>
+    <button id="multiply">*</button>
+    <button id="divide">/</button>
+  </div>
+  <br>
+  <button id="clear">clear</button>
+  <p>Total:<span id='total'> 0</span></p>
+</body>
 </html>
