@@ -1,10 +1,10 @@
 $(document).ready(function(){
   console.log('DOM has loaded!');
 
-// get values from input fields and call 'POST' /math request
+  // get values from input fields and call 'POST' /math request
   $('.mathOperators').on('click', 'button', function(){
     var postBody = {
-      type: this.id,
+      type: this.id, // defining type based on id
       x: parseInt($('#number1').val()),
       y: parseInt($('#number2').val())
     };
@@ -12,14 +12,14 @@ $(document).ready(function(){
     console.log(postBody);
   });
 
-//clear button event handler
+  //clear button event handler
   $('#clear').on('click', function(){
     $('#number1').val('');
     $('#number2').val('');
     $('#total').text(' 0');
   });
 
-// makes ajax request
+  // makes ajax request
   function postMathRequest(postBody){
     $.ajax({
       type: 'POST',
@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
   };
 
-//updating total on the DOM
+  //updating total on the DOM
   function updateTotal(total){
     $('#total').text(' ' + total);
   }

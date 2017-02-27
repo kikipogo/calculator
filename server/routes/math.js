@@ -1,14 +1,14 @@
+// defining dependencies
 var express = require('express');
 var router = express.Router();
 var calculatorObject;
 
-
-
+// execute function when '/' post occurs
 router.post('/', function(req, res){
   console.log(req.body);
   calculatorObject = req.body;
   var value = 0;
-  if(calculatorObject.type == 'add'){
+  if(calculatorObject.type == 'add'){ // .type specifies operation | defined client side in client.js
     value = add(calculatorObject.x, calculatorObject.y);
   } else if (calculatorObject.type == 'subtract'){
     value = subtract(calculatorObject.x, calculatorObject.y);
